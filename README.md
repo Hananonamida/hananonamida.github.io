@@ -43,7 +43,7 @@
     > **1.6前端模板JS类**
     >> 系统JS函数类，用于/home/***.html模板的表单操作、提交操作、页面点击动作操作、阅读量读取、收藏等动作的支持,放在html的头部head内
     >>
-     `<!-- 系统关键js(放在head标签内，用到了系统函数时必须引用) -->
+        `<!-- 系统关键js(放在head标签内，用到了系统函数时必须引用) -->
         <script type="text/javascript">var is_mobile_cms = '{IS_MOBILE}';</script>
         <script src="{LANG_PATH}lang.js" type="text/javascript"></script>
         <script src="{THEME_PATH}assets/global/plugins/jquery.min.js" type="text/javascript"></script>
