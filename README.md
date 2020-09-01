@@ -1,37 +1,38 @@
-## Welcome to GitHub Pages
+迅睿CMS
+=================
+----------
 
-You can use the [editor on GitHub](https://github.com/Hananonamida/hananonamida.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+1. 目录结构
+    - > 1.前端页面  
+    - >> default/home/*.html
+    - >> default/home/模块目录/*.html
+    - 
+    - > 如何找当前url使用的模板文件
+    - >> 修改网站根目录下的index.php文件，找到define('IS_DEV', 0); 修改为1, 然后在浏览器中按F12即可查看效果  
+    - >> ![RUNOOB 图标](https://file.xunruicms.com/vipfile/ueditor/image/202008/159687654213dfc1.png)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+    - > 自定义网站模板
+    - >> 新建模板目录：/template/pc/test_html/ （如果创建移动端模板，就建站mobile目录下即可）,test_html目录就是新的模板目录，用于存放html界面的解析文件。新建风格目录：/static/test_css/, test_css目录用于存放css和图片资源的
+    - >> 在后台指定当前网站的模板
+    - >> ![RUNOOB 图标](https://file.xunruicms.com/vipfile/201908/5b015da4379d9b1.png)
 
-### Markdown
+    - >> 在后台指定当前网站的模板
+    - >> ![RUNOOB 图标](https://file.xunruicms.com/vipfile/201908/379d9b1b6a7644b.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+2. 模板文件
+    - 第一项嵌套的第一个元素
+    - 第一项嵌套的第二个元素
+3. 模板变量
 
-# Header 1
-## Header 2
-### Header 3
++ 第一项
++ 第二项
++ 第三项
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+- 第一项
+- 第二项
+- 第三项
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Hananonamida/hananonamida.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
