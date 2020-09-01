@@ -23,32 +23,32 @@
     >> 引用css风格目录，{HOME_THEME_PATH} 当前模板风格 /static/风格目录/ ,<br>
     `<link href="{HOME_THEME_PATH}xxxxx.css" rel="stylesheet" type="text/css" />`
 
-    |  常量对照目录表| 作用 |
-    |  ----  | ----       |
-    | {HOME_THEME_PATH}|当前模板风格 /static/风格目录/ |
-    | {ROOT_THEME_PATH}   | 绝对与主站域名的路径 |
-    | {THEME_PATH} |资源目录/static/ |
-    | {MOBILE_THEME_PATH}      | 移动端风格目录路径 |
-    | {$my_web_url}|当前页面的url地址 |
-    | {SITE_URL}   |当前网站的url域名 |
-    | {SITE_MURL}|当前网站的移动端域名 |
-    | {SITE_NAME}|当前网站名称 |
-    | {SITE_LOGO}|当前网站的logo图片 |
-    | {LANG_PATH}|当前网站的语言包目录 |
-    | {CLIENT_URL}|当前终端的域名 |
-    | {MEMBER_URL}|用户中心地址
-    |{SITE_ICP}| 网站ICP备案号|
-    |{SITE_TONGJI}| 网站统计代码|
+    | 常量对照目录表      | 作用                           |
+    | ------------------- | ------------------------------ |
+    | {HOME_THEME_PATH}   | 当前模板风格 /static/风格目录/ |
+    | {ROOT_THEME_PATH}   | 绝对与主站域名的路径           |
+    | {THEME_PATH}        | 资源目录/static/               |
+    | {MOBILE_THEME_PATH} | 移动端风格目录路径             |
+    | {$my_web_url}       | 当前页面的url地址              |
+    | {SITE_URL}          | 当前网站的url域名              |
+    | {SITE_MURL}         | 当前网站的移动端域名           |
+    | {SITE_NAME}         | 当前网站名称                   |
+    | {SITE_LOGO}         | 当前网站的logo图片             |
+    | {LANG_PATH}         | 当前网站的语言包目录           |
+    | {CLIENT_URL}        | 当前终端的域名                 |
+    | {MEMBER_URL}        | 用户中心地址                   |
+    | {SITE_ICP}          | 网站ICP备案号                  |
+    | {SITE_TONGJI}       | 网站统计代码                   |
 
     > **1.6前端模板JS类**
     >> 系统JS函数类，用于/home/***.html模板的表单操作、提交操作、页面点击动作操作、阅读量读取、收藏等动作的支持,放在html的头部head内
     >>
-        `<!-- 系统关键js(放在head标签内，用到了系统函数时必须引用) -->
+        <!-- 系统关键js(放在head标签内，用到了系统函数时必须引用) -->
         <script type="text/javascript">var is_mobile_cms = '{IS_MOBILE}';</script>
         <script src="{LANG_PATH}lang.js" type="text/javascript"></script>
         <script src="{THEME_PATH}assets/global/plugins/jquery.min.js" type="text/javascript"></script>
         <script src="{THEME_PATH}assets/js/cms.js" type="text/javascript"></script>
-        <!-- 系统关键js结束 -->`
+        <!-- 系统关键js结束 -->
 
     > **1.7模板调试信息debug**
     >> 用于循环标签的诊断测试
@@ -63,48 +63,12 @@
         {$debug_r}
         会输出这个标签的诊断信息
 
-2. ## **模板文件**
+2. ## 模板文件
     > **2.1.1网站表单模板**
-    >> 默认网站表单模板介绍<br>
-        发布：/template/pc/default/home/form_post.html<br>
-        列表：/template/pc/default/home/form_list.html<br>
-        查看：/template/pc/default/home/form_show.html<br>
-
-    >> 自定义网站表单模板介绍<br>
-        发布：/template/pc/default/home/form/表单表名_post.html<br>
-        列表：/template/pc/default/home/form/表单表名_list.html<br>
-        查看：/template/pc/default/home/form/表单表名_show.html<br>
-
-    >> 网站表单URL地址介绍<br>
-        发布：{router::form_post_url("表单英文名")}<br>
-        列表：{router::form_list_url("表单英文名")}<br>
-        查看：{router::form_show_url("表单英文名", 表单id)}<br>
-
-
+    
     >> **2.1.2.网站表单列表页面标签**
 
-        {$form_name} 表单中文名称
-        {$form_table} 表单英文名称
-
-        // 表单数据列表分页模式调用方法
-        {form form=$form_table page=1 urlrule=$urlrule pagesize=5}
-        {router::form_show_url($form_table, $t.id)} 表单内容地址
-        {dr_strcut($t.title, 60)} 截取60个字符的标题
-        {$t.inputtime} 格式化后的发布日期
-        {dr_date($t._inputtime, "Y-m-d")} 自定义发布日期
-        {/form}
-        {$pages} 分页字符串
-
-
     >> **2.1.3.表单内容页标签**
-
-        {$form_name} 表单中文名称
-        {$form_table} 表单英文名称
-
-        {$title} 标题
-        {$inputtime} 发布时间
-
-        {$自定义字段} 自定义字段输出（每个自定义的字段输出方式不一样，具体参考字段输出说明）
 
     >> **2.1.4.会员界面**
 
@@ -112,16 +76,120 @@
 
 
     > **2.2.模块相关文件**
-    >> 前端界面<br>
+    >> **前端界面**<br>
     >> 1、前端显示模板介绍<br>
-    模块首页：/template/pc/default/demo/index.html (独立模块才有)<br>
-    模块栏目封面：/template/pc/default/demo/category.html<br>
-    模块栏目列表：/template/pc/default/demo/list.html<br>
-    模块内容：/template/pc/default/demo/show.html<br>
-    模块搜索页面：/template/pc/default/demo/search.html<br>
-    模块评论页面：/template/pc/default/demo/comment.html comment_ajax.html<br>
+        模块首页：/template/pc/default/demo/index.html (独立模块才有)<br>
+        模块栏目封面：/template/pc/default/demo/category.html<br>
+        模块栏目列表：/template/pc/default/demo/list.html<br>
+        模块内容：/template/pc/default/demo/show.html<br>
+        模块搜索页面：/template/pc/default/demo/search.html<br>
+        模块评论页面：/template/pc/default/demo/comment.html comment_ajax.html<br>
+    >> 2、用户中心管理模板介绍<br>
+
+    > **2.3.模块草稿、回收站、审核、定时的内容预览页**
+
+    > **2.4.自定义模块后台模板文件页**
+
+    > **2.5.自定义后台模板文件**
+
+    > **2.4.按模块内容单独自定义模板**
 
 
+3. ## 模板变量
+    参考官方：http://help.xunruicms.com/101.html
 
+4. ## 使用
+    > **1.模块独立栏目列表循环**
+    ```
+    {category 
+    module=模块目录名称 id=栏目id，pid=指定父级栏目id号，num=显示数量order=inputtime排序
+    return=返回变量(默认返回$t)
+    
+    {/category} 
 
+    例1：指定栏目
+    {category module=news id=1}
+        <p>栏目名称{$t.name}</p>
+        <p>栏目地址{$t.url}</p>
+    {/category} 
+
+    例2：循环多个栏目
+    {category module=news id=1,2,3}
+        <p>栏目名称{$t.name}</p>
+        <p>栏目地址{$t.url}</p>
+    {/category}
+
+    例3：循环栏目下的子栏目
+    {category module=news id=1 return=c1}
+        我是父栏目：{$c1.name}<br>
+        {category module=news pid=$c1.id return=c2}
+            我是{$c1.name}的子栏目：{$c2.name}<br>
+        {/category}
+    {/category}
+
+    例4：循环某一个栏目里面的文章
+    {category module=news id=1}
+        {module module=news flag=1 return=t1}
+            <p>文章标题{$t1.title}</p>
+            <p>文章关键字{$t1.description}</p>
+        {/module}
+    {/category} 
+
+    ```
+    **2.模块共享栏目列表循环**
+    ```
+    {category module=share固定参数, id=栏目id，pid=指定父级栏目id号，num=显示数量return=返回变量}
+    {/category}
+
+    例1：查询某一个共享栏目
+    {category module=share id=1} 
+        栏目名称{$t.name}
+        栏目地址{$t.url}
+        缩略图 {dr_thumb($t.thumb)}
+        栏目内容{$t.content}
+    {/category}
+
+    例2：查询共享栏目的所有顶级栏目
+    {category module=share pid=0} 
+        栏目名称{$t.name}
+        栏目地址{$t.url}
+        缩略图 {dr_thumb($t.thumb)}
+        栏目内容{$t.content}
+    {/category}
+
+    例3：循环共享栏目下的子栏目
+    {category module=share id=1 return=c1}
+        我是父栏目：{$c1.name}<br>
+        {category module=share pid=$c1.id return=c2}
+            我是{$c1.name}的子栏目：{$c2.name}<br>
+        {/category}
+    {/category}
+
+    
+    例4：循环某一个共享栏目里面的文章
+    {category module=share id=1}
+        {module module=news flag=1 return=t1}
+            <p>文章标题{$t1.title}</p>
+            <p>文章关键字{$t1.description}</p>
+        {/module}
+    {/category}
+
+    ```
+
+    | 常用关键字目录表 | 作用     |
+    | ---------------- | -------- |
+    | {name}           | 名字     |
+    | {title}          | 文章标题 |
+    | {thumb}          | 缩略图   |
+    | {description}    | 关键字   |
+    | {content}        | 内容     |
+    | {url}            | URL地址  |
+    | {id}             | 当前id   |
+
+    | 常量函数目录表 | 作用       | 例子                               | 参数 |
+    | -------------- | ---------- | ---------------------------------- | ---- |
+    | {dr_date}      | 获取日期   | {dr_date($t1._inputtime, "Y-m-d")} |$_字段名, 'Y-m-d'|
+    | {dr_strcut}    | 截取字符串 | {dr_strcut($t1.title,30)}          |$字符串，截取长度|
+    | {dr_thumb}     | 获取缩略图       | {dr_thumb($t1)}                    |图片id, 宽度, 高度, 是否水印, 缩放标准值, 是否下载远程图片进行剪切|
+    | {dr_down_file}    | 下载文件 | {dr_strcut($t1.title,30)}          |$字段名|
 
