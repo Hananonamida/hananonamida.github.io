@@ -1,7 +1,7 @@
 迅睿CMS模板开发
 =================
 
-1. **入门教程**
+1. ## 入门教程
     > **1.1.前端页面**
     >> default/home/*.html<br>
     >> default/home/模块目录/*.html
@@ -53,38 +53,36 @@
     > **1.7模板调试信息debug**
     >> 用于循环标签的诊断测试
         例如
-        `
         {module *******}
         {/module}
-        {$debug}`
+        {$debug}
 
     >> 当标签自定了return，需要这样改写
-        `
         {module ******* return=r}
         {/module}
-        {$debug_r}`
+        {$debug_r}
         会输出这个标签的诊断信息
 
-2. **模板文件**
-    > **2.1.网站表单模板**
-    >> 默认网站表单模板介绍
-        发布：/template/pc/default/home/form_post.html
-        列表：/template/pc/default/home/form_list.html
-        查看：/template/pc/default/home/form_show.html
+2. ## **模板文件**
+    > **2.1.1网站表单模板**
+    >> 默认网站表单模板介绍<br>
+        发布：/template/pc/default/home/form_post.html<br>
+        列表：/template/pc/default/home/form_list.html<br>
+        查看：/template/pc/default/home/form_show.html<br>
 
-    >> 自定义网站表单模板介绍
-        发布：/template/pc/default/home/form/表单表名_post.html
-        列表：/template/pc/default/home/form/表单表名_list.html
-        查看：/template/pc/default/home/form/表单表名_show.html
+    >> 自定义网站表单模板介绍<br>
+        发布：/template/pc/default/home/form/表单表名_post.html<br>
+        列表：/template/pc/default/home/form/表单表名_list.html<br>
+        查看：/template/pc/default/home/form/表单表名_show.html<br>
 
-    >> 网站表单URL地址介绍
-        发布：{router::form_post_url("表单英文名")}
-        列表：{router::form_list_url("表单英文名")}
-        查看：{router::form_show_url("表单英文名", 表单id)}
+    >> 网站表单URL地址介绍<br>
+        发布：{router::form_post_url("表单英文名")}<br>
+        列表：{router::form_list_url("表单英文名")}<br>
+        查看：{router::form_show_url("表单英文名", 表单id)}<br>
 
 
-    >> **2.2.网站表单列表页面标签**
-        
+    >> **2.1.2.网站表单列表页面标签**
+
         {$form_name} 表单中文名称
         {$form_table} 表单英文名称
 
@@ -98,7 +96,7 @@
         {$pages} 分页字符串
 
 
-    >> **2.3.表单内容页标签**
+    >> **2.1.3.表单内容页标签**
 
         {$form_name} 表单中文名称
         {$form_table} 表单英文名称
@@ -108,7 +106,20 @@
 
         {$自定义字段} 自定义字段输出（每个自定义的字段输出方式不一样，具体参考字段输出说明）
 
+    >> **2.1.4.会员界面**
 
+    >> **2.1.5.后台界面**
+
+
+    > **2.2.模块相关文件**
+    >> 前端界面<br>
+    >> 1、前端显示模板介绍<br>
+    模块首页：/template/pc/default/demo/index.html (独立模块才有)<br>
+    模块栏目封面：/template/pc/default/demo/category.html<br>
+    模块栏目列表：/template/pc/default/demo/list.html<br>
+    模块内容：/template/pc/default/demo/show.html<br>
+    模块搜索页面：/template/pc/default/demo/search.html<br>
+    模块评论页面：/template/pc/default/demo/comment.html comment_ajax.html<br>
 
 
 
