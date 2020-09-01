@@ -127,48 +127,48 @@
     > **1.6前端模板JS类**
     >> 系统JS函数类，用于/home/***.html模板的表单操作、提交操作、页面点击动作操作、阅读量读取、收藏等动作的支持,放在html的头部head内
     >>
-        `<!-- 系统关键js(放在head标签内，用到了系统函数时必须引用) -->
+        <!-- 系统关键js(放在head标签内，用到了系统函数时必须引用) -->
         <script type="text/javascript">var is_mobile_cms = '{IS_MOBILE}';</script>
         <script src="{LANG_PATH}lang.js" type="text/javascript"></script>
         <script src="{THEME_PATH}assets/global/plugins/jquery.min.js" type="text/javascript"></script>
         <script src="{THEME_PATH}assets/js/cms.js" type="text/javascript"></script>
-        <!-- 系统关键js结束 -->`
+        <!-- 系统关键js结束 -->
 
     > **1.7模板调试信息debug**
     >> 用于循环标签的诊断测试
         例如
-        `
+        
         {module *******}
         {/module}
-        {$debug}`
+        {$debug}
 
     >> 当标签自定了return，需要这样改写
-        `
+        
         {module ******* return=r}
         {/module}
-        {$debug_r}`
+        {$debug_r}
         会输出这个标签的诊断信息
 
 2. **模板文件**
     > **2.1.网站表单模板**
     >> 默认网站表单模板介绍
-    >>    发布：/template/pc/default/home/form_post.html
-    >>    列表：/template/pc/default/home/form_list.html
-    >>    查看：/template/pc/default/home/form_show.html
+    >>>    发布：/template/pc/default/home/form_post.html
+    >>>    列表：/template/pc/default/home/form_list.html
+    >>>    查看：/template/pc/default/home/form_show.html
 
     >> 自定义网站表单模板介绍
-    >>    发布：/template/pc/default/home/form/表单表名_post.html
-    >>    列表：/template/pc/default/home/form/表单表名_list.html
-    >>    查看：/template/pc/default/home/form/表单表名_show.html
+    >>>    发布：/template/pc/default/home/form/表单表名_post.html
+    >>>    列表：/template/pc/default/home/form/表单表名_list.html
+    >>>    查看：/template/pc/default/home/form/表单表名_show.html
 
     >> 网站表单URL地址介绍
-    >>    发布：{router::form_post_url("表单英文名")}
-    >>    列表：{router::form_list_url("表单英文名")}
-    >>    查看：{router::form_show_url("表单英文名", 表单id)}
+    >>>    发布：{router::form_post_url("表单英文名")}
+    >>>    列表：{router::form_list_url("表单英文名")}
+    >>>    查看：{router::form_show_url("表单英文名", 表单id)}
 
     >> 网站表单列表页面标签
         
-        ```{$form_name} 表单中文名称
+        {$form_name} 表单中文名称
         {$form_table} 表单英文名称
 
         // 表单数据列表分页模式调用方法
@@ -178,7 +178,7 @@
         {$t.inputtime} 格式化后的发布日期
         {dr_date($t._inputtime, "Y-m-d")} 自定义发布日期
         {/form}
-        {$pages} 分页字符串```
+        {$pages} 分页字符串
 
 
 
