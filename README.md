@@ -152,23 +152,23 @@
 2. **模板文件**
     > **2.1.网站表单模板**
     >> 默认网站表单模板介绍
-        发布：/template/pc/default/home/form_post.html
-        列表：/template/pc/default/home/form_list.html
-        查看：/template/pc/default/home/form_show.html
+    >>    发布：/template/pc/default/home/form_post.html
+    >>    列表：/template/pc/default/home/form_list.html
+    >>    查看：/template/pc/default/home/form_show.html
 
     >> 自定义网站表单模板介绍
-        发布：/template/pc/default/home/form/表单表名_post.html
-        列表：/template/pc/default/home/form/表单表名_list.html
-        查看：/template/pc/default/home/form/表单表名_show.html
+    >>    发布：/template/pc/default/home/form/表单表名_post.html
+    >>    列表：/template/pc/default/home/form/表单表名_list.html
+    >>    查看：/template/pc/default/home/form/表单表名_show.html
 
     >> 网站表单URL地址介绍
-        发布：{router::form_post_url("表单英文名")}
-        列表：{router::form_list_url("表单英文名")}
-        查看：{router::form_show_url("表单英文名", 表单id)}
+    >>    发布：{router::form_post_url("表单英文名")}
+    >>    列表：{router::form_list_url("表单英文名")}
+    >>    查看：{router::form_show_url("表单英文名", 表单id)}
 
     >> 网站表单列表页面标签
-        ```
-        {$form_name} 表单中文名称
+        
+        ```{$form_name} 表单中文名称
         {$form_table} 表单英文名称
 
         // 表单数据列表分页模式调用方法
@@ -178,9 +178,8 @@
         {$t.inputtime} 格式化后的发布日期
         {dr_date($t._inputtime, "Y-m-d")} 自定义发布日期
         {/form}
+        {$pages} 分页字符串```
 
-        {$pages} 分页字符串
-        ```
 
 
 
