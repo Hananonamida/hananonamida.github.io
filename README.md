@@ -1,6 +1,5 @@
-<center>迅睿CMS模板开发</center>
+迅睿CMS模板开发
 =================
-----------
 
 1. **入门教程**
     > **1.1.前端页面**
@@ -49,8 +48,18 @@
         <script src="{THEME_PATH}assets/global/plugins/jquery.min.js" type="text/javascript"></script>
         <script src="{THEME_PATH}assets/js/cms.js" type="text/javascript"></script>
         <!-- 系统关键js结束 -->`
+    > **1.7模板调试信息debug**
+    >> 用于循环标签的诊断测试
 
-
+        `例如
+        {module *******}
+        {/module}
+        {$debug} 会输出这个标签的诊断信息`
+        `
+        当标签自定了return，需要这样改写
+        {module ******* return=r}
+        {/module}
+        {$debug_r} 会输出这个标签的诊断信息`
 
 2. **模板文件**
   第一项嵌套的第一个元素
