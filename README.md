@@ -3,11 +3,11 @@
 ----------
 
 1. 目录结构
-    - > 1.前端页面  
-    - >> default/home/*.html
-    - >> default/home/模块目录/*.html
-    - 
-    - > 如何找当前url使用的模板文件
+    > 1.前端页面  
+    > default/home/*.html
+    > default/home/模块目录/*.html
+
+    > 如何找当前url使用的模板文件
     - >> 修改网站根目录下的index.php文件，找到define('IS_DEV', 0); 修改为1, 然后在浏览器中按F12即可查看效果  
     - >> ![RUNOOB 图标](https://file.xunruicms.com/vipfile/ueditor/image/202008/159687654213dfc1.png)
 
