@@ -20,7 +20,7 @@
     >> ![RUNOOB 图标](https://file.xunruicms.com/vipfile/201908/379d9b1b6a7644b.png)
 
     > **1.5固定变量介绍**
-    >> 引用css风格目录，{HOME_THEME_PATH} 当前模板风格 /static/风格目录/ ,<br>
+    >> 引用css风格目录，{HOME_THEME_PATH} 当前模板风格 /static/风格目录/ , 例如：<br>
     `<link href="{HOME_THEME_PATH}xxxxx.css" rel="stylesheet" type="text/css" />`
 
     | 常量对照目录表      | 作用                           |
@@ -30,15 +30,11 @@
     | {THEME_PATH}        | 资源目录/static/               |
     | {MOBILE_THEME_PATH} | 移动端风格目录路径             |
     | {$my_web_url}       | 当前页面的url地址              |
-    | {SITE_URL}          | 当前网站的url域名              |
-    | {SITE_MURL}         | 当前网站的移动端域名           |
     | {SITE_NAME}         | 当前网站名称                   |
     | {SITE_LOGO}         | 当前网站的logo图片             |
-    | {LANG_PATH}         | 当前网站的语言包目录           |
     | {CLIENT_URL}        | 当前终端的域名                 |
     | {MEMBER_URL}        | 用户中心地址                   |
-    | {SITE_ICP}          | 网站ICP备案号                  |
-    | {SITE_TONGJI}       | 网站统计代码                   |
+
 
     > **1.6前端模板JS类**
     >> 系统JS函数类，用于/home/***.html模板的表单操作、提交操作、页面点击动作操作、阅读量读取、收藏等动作的支持,放在html的头部head内
@@ -93,7 +89,7 @@
     参考官方：http://help.xunruicms.com/101.html
 
 4. ## 使用
-    > **3.1模块独立栏目列表循环**
+    **3.1模块独立栏目列表循环**
     ```
     {category 
     module=模块目录名称 id=栏目id，pid=指定父级栏目id号，num=显示数量order=inputtime排序
@@ -172,17 +168,18 @@
 
     **3.3模块内容列表循环**
 
-    {category  module=模块目录名称 ....}{/category}
+    **{category  module=模块目录名称 ....}{/category}**
     | category常用参数 | 作用                                                                        |
     | ---------------- | --------------------------------------------------------------------------- |
+    | {module}         | 模块目录                                                                    |
     | {id}             | 指定栏目id查询，多个id以,号分开                                             |
     | {pid}            | 指定父级栏目id号                                                            |
     | {more}           | 表示显示数量，支持定点查询，例如1,2表示从第1条记录开始，共显示2条数据       |
     | {num}            | 表示显示数量，不支持定点查询，只能填写整数                                  |
     | {return}         | 默认返回变量为t，调用方式就是{$t.字段值}（多级查询必须设置return=其他字母） |
 
-
-    {module module=模块名称 ....}{/module}
+    
+    **{module module=模块名称 ....}{/module}**
     | module常用参数 | 作用                                                                                     |
     | -------------- | ---------------------------------------------------------------------------------------- |
     | {module}       | 模块目录，例如news                                                                       |
@@ -220,8 +217,8 @@
     <br><br>
     4.1 用户登录后选择内容管理->文章管理-发布内容，填写主题内容后保存内容。<br><br>
     ![RUNOOB 图标](https://s1.ax1x.com/2020/09/02/wSHDL4.png)<br><br>
-    4.2 **一审管理员**账户登录后台选择内容->内容审核->文章审核，选择你要的审核的文章<br><br>
+    4.2 **一审管理员**账户登录后台选择内容->内容审核->文章审核，选择你要的审核的文章。<br><br>
     ![RUNOOB 图标](https://s1.ax1x.com/2020/09/02/wSH6oR.png)<br><br>
-    4.3 **二审管理员**账户登录后台选择内容->内容审核->文章审核，选择你要的审核的文章<br><br>
+    4.3 **二审管理员**账户登录后台选择内容->内容审核->文章审核，选择你要的审核的文章,文章二审后就可以发布了。<br><br>
     ![RUNOOB 图标](https://s1.ax1x.com/2020/09/02/wSHfSK.png)
-    文章二审后就可以发布了.
+    
